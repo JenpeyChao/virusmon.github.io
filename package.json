@@ -21,7 +21,7 @@
   "nodemonConfig": {
     "ignore": ["db.json"]
   },
-  "homepage": "https://github.com/cmsc447-sp2022/teamB#readme",
+  "index": "https://github.com/cmsc447-sp2022/teamB#readme",
   "dependencies": {
     "@moebius/http-graceful-shutdown": "^1.1.0",
     "express": "^4.17.3",
