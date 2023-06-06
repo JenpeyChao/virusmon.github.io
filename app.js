@@ -66,7 +66,7 @@ app.use('/js', express.static('js'))
 
 //GET request to root of web page and render homePage.html file
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + "/homePage.html");
+  res.sendFile(__dirname + "/index.html");
 })
 
 //GET request to /results and render resultsPage.html file
