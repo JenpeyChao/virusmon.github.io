@@ -1,0 +1,129 @@
+@import url("header.css");
+@import url("table.css");
+@import url("clear.css");
+
+div{
+    overflow: hidden;
+}
+
+body{
+    background: rgb(rgb(214, 222, 233), green, blue);
+}
+
+main{
+    min-width: 1200px;
+    padding-top: 150px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*background-color: rgb(165, 165, 182);*/
+}
+
+
+#center {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.decoration{
+    position: relative;
+    padding-bottom: 50px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    justify-content: center;
+}
+
+.resultbar{
+    width: 150px;
+    height: 150px;
+
+    overflow: hidden;
+    position: relative;
+
+    padding: 25px;
+}
+.outerbar{
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    /*border: 1px solid red;*/
+
+    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0, 0.15), 
+                -6px -6px 10px -1px rgb(255, 255, 255, 0.15);
+    
+    -moz-box-shadow: 6px 6px 12px rgb(26, 25, 34, .15), -6px -6px 10px -1px rgb(255, 255, 255, 0.15); 
+    -webkit-box-shadow: 6px 6px 12px rgb(5, 9, 44, .15), -6px -6px 10px -1px rgb(255, 255, 255, 0.15);
+
+    padding: 15px;
+}
+.innerbar{
+    height: 70px;
+    width: 70px;
+
+    border-radius: 50%;
+    /*border: 1px solid red;*/
+
+    box-shadow: inset 4px 4px 6px -1px rgb(0, 0, 0, 0.2), 
+                inset -4px -4px 6px -1px rgb(255, 255, 255, 0.15),
+                -0.5px -0.5px 0px rgb(255, 255, 255, .5), 
+                0.5px 0.5px 0px rgb(0, 0, 0, 0.15),
+                0px 12px 10px -10px rgba(0,0,0, 0.15);
+    
+    -moz-box-shadow: inset 4px 4px 6px -1px rgb(0, 0, 0, 0.2), 
+                    inset -4px -4px 6px -1px rgb(255, 255, 255, 0.15),
+                    -0.5px -0.5px 0px rgb(255, 255, 255, .5), 
+                    0.5px 0.5px 0px rgb(0, 0, 0, 0.15),
+                    0px 12px 10px -10px rgba(0,0,0, 0.15);
+
+    -webkit-box-shadow: inset 4px 4px 6px -1px rgb(0, 0, 0, 0.2), 
+                        inset -4px -4px 6px -1px rgb(255, 255, 255, 0.15),
+                        -0.5px -0.5px 0px rgb(255, 255, 255, .15), 
+                        0.5px 0.5px 0px rgb(0, 0, 0, 0.15),
+                        0px 12px 10px -10px rgba(0,0,0, 0.15);
+
+}
+circle{
+    fill: none;
+    stroke: rgb(60, 144, 255);
+    stroke-width: 20px;
+}
+#virusfill{
+    fill: none;
+    stroke: rgb(255, 0, 119);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 400;
+}
+svg{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: inline-block;
+    padding: 5px;
+}
+
+.container{
+    display: inline-block;
+}
+
+.Virus-Dex{
+    position: absolute; 
+    right:0; left:0; top:0; bottom:0;
+    height: 100%; width: 100%;
+    max-height: 10000;
+}
+.Virus-Dex::content *{
+    overflow: hidden;
+}
+
+.last_analysis_stats{
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}

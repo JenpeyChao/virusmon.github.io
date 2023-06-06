@@ -1,0 +1,32 @@
+{
+  "name": "teamb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmsc447-sp2022/teamB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/cmsc447-sp2022/teamB/issues"
+  },
+  "nodemonConfig": {
+    "ignore": ["db.json"]
+  },
+  "homepage": "https://github.com/cmsc447-sp2022/teamB#readme",
+  "dependencies": {
+    "@moebius/http-graceful-shutdown": "^1.1.0",
+    "express": "^4.17.3",
+    "lowdb": "^3.0.0",
+    "node-fetch": "^3.2.3",
+    "nodemon": "^2.0.15"
+  }
+}

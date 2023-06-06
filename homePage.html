@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home page</title>
+        <link rel="stylesheet" type="text/css" href="static/home.css?version=1.0" />
+
+        <!-- Pixle Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>  
+            <div class="topnav" >
+                <h1>Virusmon</h1>
+
+                <!-- <nav id="menu">
+                    <a href='/'><button>Home</button></a>
+                    <a href="/results"><button>Results</button></a>
+                    
+                </nav>-->                 
+            </div>
+        </header>
+        <main>
+            <div style="display: inline-block; position:relative;">
+                <div id="battle_transition" style="background-color: black; top:0; right:0; bottom:0; left:0; position: absolute; opacity:0;">
+                    <div id = "prompt_response" style="margin-left:30%; margin-left:30%; margin-top:20%; margin-bottom: 20%; width: 40%; opacity: 0; position: absolute;">
+                        <h1 id = "prompt_response_message" style="color:white; width: 100%; text-align: center; padding:30px; opacity: 1;"> It ran away...</h1>
+                        <h1 id = "prompt_response_elaborate" style="color:rgb(116, 116, 116); width: 100%; text-align: center; font-size: 20px; opacity: 1;"></h1>
+
+                    </div>
+                    <div id = "prompt_overlay" style="margin-left:30%; margin-left:30%; margin-top:20%; margin-bottom: 20%; width: 40%; opacity: 0; position: absolute;">
+                        <h1 style="color:white; padding:30px;"> Please enter a hash...</h1>
+                        <input id="hash_value" type = "value" style="width: 100%; height: 30px"></input>
+                    </div>
+                </div>
+                <!-- The Game -->
+                <canvas></canvas>
+                
+                <!-- Battle Overlay -->
+                <div id="BattleOverlay" style = "position: absolute; left:0; top:0; right:0; bottom:0; display: none;">
+                    <!-- Attack Bar -->
+                    <div style = "background-color: grey; height: 140px; position: absolute; bottom: 0; left: 0; right: 0; display: flex;">
+                        <div id = "attacksBox" style = "width: 60%; display: grid; grid-template-columns: repeat(2, 1fr)">
+
+                        </div>
+                        <div style = "display: flex; align-items: center; justify-content: center; width: 40%;">
+                            <h1>Attack Type</h1>
+                        </div>
+
+                        <div id = "DialogueBox">This is dialogue!</div>
+
+                    </div>
+                    <!-- Anti-Virusmon healthbar -->
+                    <div style ="background-color: grey; width:250px; position: absolute; bottom: 190px; right: 50px; padding: 12px;
+                    border-bottom: 5px solid darkslategrey;; border-right:5px solid darkslategrey;">
+                        <h1 style="font-size: 20px; margin-bottom:10px;">Anti-virusmon</h1>
+                        <div id="HealthBar" style="position:relative; margin-top:10px; padding-bottom: 10px;">
+                            <div style = "height: 10px; background-color: rgb(111, 87, 121); position:absolute; top:0; right:0; left:0; bottom:0;"></div>
+                            <div id = "playerHealthBar" style = "height: 10px; background-color: rgb(0, 238, 255); position:absolute; top:0; right:0px; left:0; bottom:0; width: 100%;"></div>
+                        </div>
+                    </div>
+                    <!-- Virusmon healthbar -->
+                    <div style ="background-color: grey; width:250px; position: absolute; top: 50px; left: 50px; padding: 12px;
+                    border-bottom: 5px solid darkslategrey;; border-right:5px solid darkslategrey;">
+                        <h1 class="text-glitch" style="font-size: 20px; margin-bottom:10px;">Virusmon</h1>
+                        <div id="HealthBar" style="position:relative; margin-top:10px; padding-bottom: 10px;">
+                            <div style = "height: 10px; background-color: rgb(87, 101, 121); position:absolute; top:0; right:0; left:0; bottom:0;"></div>
+                            <div id = "enemyHealthBar" style = "height: 10px; background-color: rgb(212, 0, 255); position:absolute; top:0; right:0px; left:0; bottom:0; width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="results-section" style="position:relative; height: 1000; margin-top: 40px">
+                <div class="Virus-Dex">
+                    <!-- <span class="decoration">
+                        <div style = "display: block;margin-left: auto;margin-right: auto; width: 30%;">
+                            
+                            <img id = "dex-img" src="./images/anti-virusmon.png"  width = "200" height = "170" style="image-rendering: pixelated;" overflow="hidden" display="inline-block" >
+                            
+                        </div>
+                    </span >-->
+                    <h1 id="md5" style = "width: 100%; text-align: center; padding: 10px; font-weight: bold; font-size: 40px;" >...</h1>
+                    <h1 id="sha256" style = "width: 100%; text-align: center; padding: 5px; font-size: 14px; color: rgb(119, 102, 113);" >...</h1>
+                    <h1 id="sha1" style = "width: 100%; text-align: center; padding: 5px; padding-bottom: 20; font-size: 14px; color: rgb(119, 102, 113);" >...</h1>
+
+                    <span style="width:100%; margin-top:50px" >
+                        <div style = "display: inline-block; width: 30%; margin-right: 4%; background-color: rgb(207, 207, 207)">                        
+                            <h1 style="text-align: center; font-size: 20px; width: 100%;">Size</h1>
+                            <h1 id = "file_size" style="text-align: center; font-size: 20px; width: 100%;">20</h1>
+                        </div>
+                        <div style = "display: inline-block; width: 30%; margin-right: 4%; background-color: rgb(207, 207, 207)">                        
+                            <h1 style="text-align: center; font-size: 20px; width: 100%;">Type</h1>
+                            <h1 id = "file_type" style="text-align: center; font-size: 20px; width: 100%;">20</h1>
+                        </div>
+                        <div style = "display: inline-block; width: 30%; background-color: rgb(207, 207, 207)">                        
+                            <h1 style="text-align: center; font-size: 20px; width: 100%;">Reputation</h1>
+                            <h1 id = "file_reputation" style="text-align: center; font-size: 20px; width: 100%;">20</h1>
+                        </div>
+                    </span>
+                    <span style = "height: auto; position: absolute; right: 100px; left: 100px; bottom: 0; top:250px">
+                        <div style = "position: absolute; left: 0; left: 0%; top:0; right:65%; bottom:0;">
+                            <h1 style = "background-color: #6e6e6e;color: white; height: 95px; text-align: left; font-size: 25px; padding: 30px; margin-bottom: 30px;"> Analysis Stats </h1>
+
+                            <h1 class = "last_analysis_stats" id = "harmless">harmless: </h1>
+                            <h1 class = "last_analysis_stats" id = "type-unsupported">type-unsupported: </h1>
+                            <h1 class = "last_analysis_stats" id = "suspicious">suspicious: </h1>
+                            <h1 class = "last_analysis_stats" id = "confirmed-timeout">confirmed-timeout: </h1>
+                            <h1 class = "last_analysis_stats" id = "timeout">timeout: </h1>
+                            <h1 class = "last_analysis_stats" id = "failure">failure: </h1>
+                            <h1 class = "last_analysis_stats, text-glitch" id = "malicious" style = "background-color: grey; padding: 10px">malicious: </h1>
+                            <h1 class = "last_analysis_stats" id = "undetected">undetected: </h1>
+                        </div>
+                        <div style="position: absolute; left: 40%; top:0; right:0; bottom:0; display: inline-block;">
+                            <table id="table">
+                                <tr>
+                                    <th>File Names</th>
+                                </tr>
+                        
+                            </table>
+                        </div>
+                    </span>
+                </div>
+                </div>
+            </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" 
+            integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer"></script>
+            <script src="./js/collision.js"></script>
+            <script src="./js/battleZone.js"></script>
+            <script src="./js/attacks.js"></script>
+            <script src="./js/monsters.js"></script>
+            <script src="./js/classes.js"></script>
+            <script src="./js/virusmon.js"></script>
+            <script src="./js/battle.js"></script>
+        </main>
+        
+    
+        
+    </body>
+</html>

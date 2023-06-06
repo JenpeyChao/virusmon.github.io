@@ -1,0 +1,36 @@
+table{
+    
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    overflow-y: scroll;
+}
+
+th, tr {
+    padding: 30px;
+    text-align: left;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+tr:hover {background-color: rgb(170, 213, 238);}
+
+tr{
+    height: 20px;
+    margin: 0px;
+    font-size:15px
+}
+
+th {
+    background-color: #6e6e6e;
+    color: white;
+    height: 70px;
+    text-align: left;
+    font-size: 25px;
+  }
+
+td{
+    height: 10px;
+    text-align: left;
+
+}

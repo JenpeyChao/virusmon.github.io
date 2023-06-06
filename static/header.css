@@ -1,0 +1,23 @@
+header{
+    height: 25px;
+    width: 100%;
+    background-color: grey;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    overflow: auto;
+}
+
+.topnav{
+    background-color:grey;
+
+    position: fixed;
+
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100px;
+
+}
