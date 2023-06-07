@@ -99,7 +99,7 @@ function init_pokedex(file){
 async function analyzeHash(hash_input)
 {
     console.log(hash_input)
-    await fetch(`https://virusmon.onrender.com/search/${hash_input}`)
+    await fetch(`https://jenpeychao.github.io/virusmon.github.io/search/${hash_input}`)
     .then(response => {
         if(response.ok) {
             return response.json()

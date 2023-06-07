@@ -168,7 +168,7 @@ document.getElementById('hash_value').addEventListener("keyup", (e) => {
 
 async function getRandomHash()
 {
-    await fetch(`https://virusmon.onrender.com/random`)
+    await fetch(`https://jenpeychao.github.io/virusmon.github.io/random`)
     .then(response => response.json())
     .then(json => {
         return json.md5
@@ -190,7 +190,7 @@ async function game_analyzeHash(hash_input)
     }
 
     console.log(hash_input)
-    await fetch(`https://virusmon.onrender.com/search/${hash_input}`)
+    await fetch(`https://jenpeychao.github.io/virusmon.github.io/search/${hash_input}`)
     .then(response => {
         if(response.ok) {
             return response.json()
